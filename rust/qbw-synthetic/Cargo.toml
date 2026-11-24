@@ -1,0 +1,17 @@
+[package]
+name = "qbw-synthetic"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+description = "Synthetic QuickBooks Desktop (.qbw) company file writer for qbw tests"
+
+[dependencies]
+crc32fast.workspace = true
+flate2.workspace = true
+
+[lints]
+workspace = true

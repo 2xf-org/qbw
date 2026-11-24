@@ -1,0 +1,22 @@
+[package]
+name = "qbw-py"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+description = "Python bindings for qbw, built with Bimetal"
+
+[dependencies]
+bimetal.workspace = true
+chrono.workspace = true
+qbw.workspace = true
+sa17.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

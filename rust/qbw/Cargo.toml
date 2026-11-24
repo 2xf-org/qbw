@@ -1,0 +1,24 @@
+[package]
+name = "qbw"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+readme = "README.md"
+description = "Pure-Rust reader for QuickBooks Desktop (.qbw) company files"
+keywords = ["quickbooks", "qbw", "accounting", "bookkeeping", "ledger"]
+categories = ["finance", "parser-implementations"]
+exclude = ["tests/"]
+
+[dependencies]
+chrono.workspace = true
+sa17.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+qbw-synthetic.workspace = true
+
+[lints]
+workspace = true
