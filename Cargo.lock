@@ -620,7 +620,7 @@ dependencies = [
 
 [[package]]
 name = "qbw"
-version = "0.1.0"
+version = "202611.24.0"
 dependencies = [
  "chrono",
  "qbw-synthetic",
@@ -630,7 +630,7 @@ dependencies = [
 
 [[package]]
 name = "qbw-py"
-version = "0.1.0"
+version = "202611.24.0"
 dependencies = [
  "bimetal",
  "chrono",
@@ -643,7 +643,7 @@ dependencies = [
 
 [[package]]
 name = "qbw-synthetic"
-version = "0.1.0"
+version = "202611.24.0"
 dependencies = [
  "crc32fast",
  "flate2",
@@ -687,9 +687,9 @@ checksum = "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f"
 
 [[package]]
 name = "sa17"
-version = "0.1.0"
+version = "202611.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6bed36a2e74095fbc74e65f6b9c436571a0321cca6b885406c5c03ab30c44f05"
+checksum = "2e60212414d4f25ff4f5412a4563d4ed714b11c741b78a608d09fa5c20c8b76a"
 dependencies = [
  "chrono",
  "crc32fast",

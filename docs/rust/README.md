@@ -6,7 +6,7 @@ Read QuickBooks Desktop (`.qbw`) company files in Rust without QuickBooks or a d
 
 ```toml
 [dependencies]
-qbw = "0.1"
+qbw = "=202611.24.0"
 ```
 
 ## Quick start
@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let parts = accounts.named("Sales:Parts").ok_or("account not found")?;
     println!("{} ({})", parts.name, parts.account_type);
 
-    let as_of = "2024-06-30".parse()?;
+    let as_of: qbw::chrono::NaiveDate = "2024-06-30".parse()?;
     let sheet = company.balance_sheet(as_of)?;
     println!("Assets: {}", sheet.assets.total);
     println!("Net income: {}", sheet.equity.net_income);

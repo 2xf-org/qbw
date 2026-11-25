@@ -4,13 +4,15 @@ Read QuickBooks Desktop (`.qbw`) company files in Rust and Python, without Quick
 
 [Documentation](docs/README.md) · [Rust](docs/rust/README.md) · [Python](docs/python/README.md)
 
+Not affiliated with or endorsed by Intuit. QuickBooks is a trademark of Intuit Inc.
+
 ## Installing
 
 Rust:
 
 ```toml
 [dependencies]
-qbw = "0.1"
+qbw = "=202611.24.0"
 ```
 
 Python (3.11+):
@@ -27,7 +29,7 @@ Rust:
 use qbw::Company;
 
 let company = Company::open("company.qbw")?;
-let as_of = "2024-06-30".parse()?;
+let as_of: qbw::chrono::NaiveDate = "2024-06-30".parse()?;
 let sheet = company.balance_sheet(as_of)?;
 
 println!("Assets: {}", sheet.assets.total);

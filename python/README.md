@@ -4,6 +4,8 @@ Read QuickBooks Desktop (`.qbw`) company files in Python, without QuickBooks or 
 
 [Python API](https://github.com/2xf-org/qbw/blob/main/docs/python/README.md) · [Rust API](https://github.com/2xf-org/qbw/blob/main/docs/rust/README.md) · [Examples](https://github.com/2xf-org/qbw/tree/main/python/examples)
 
+Not affiliated with or endorsed by Intuit. QuickBooks is a trademark of Intuit Inc.
+
 ## Installing
 
 ```bash

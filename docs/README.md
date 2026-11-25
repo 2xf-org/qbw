@@ -8,6 +8,7 @@ Read QuickBooks Desktop (`.qbw`) company files in Rust and Python, without Quick
 | --- | --- |
 | [Python](python/README.md) | Opening files, accounts, lists, transactions, financial statements, Apache Arrow (PyArrow, Polars, DuckDB), and errors |
 | [Rust](rust/README.md) | Opening files, raw database access via `sa17`, accounts, lists, transactions, ledger, reports, and errors |
+| [Releases](releases.md) | Version scheme, and the steps before and after a release tag |
 
 ## Runnable examples
 

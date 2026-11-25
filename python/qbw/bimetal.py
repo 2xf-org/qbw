@@ -30,7 +30,7 @@ except ImportError as error:
 # which the extension must match, the schema of each model by its key, and the
 # module and name of each error's class by the error's key, which the extension
 # raises a typed error as.
-CONTRACT = "6cc6b7ce552ca265"
+CONTRACT = "32dd0aec7b895f24"
 NATIVE_SCHEMAS: list[typing.Any] = []
 NATIVE_ERRORS: dict[str, tuple[str, str]] = {
     "qbw-py::qbw_py::QbwError": ("qbw.api", "QbwError"),

@@ -631,7 +631,7 @@ wheels = [
 
 [[package]]
 name = "qbw"
-version = "0.1.0"
+version = "202611.24.0"
 source = { editable = "." }
 dependencies = [
     { name = "pyarrow" },

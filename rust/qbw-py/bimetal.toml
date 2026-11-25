@@ -11,10 +11,10 @@ project = "../../python"
 
 [generated]
 # Fingerprint of the Rust/Cargo sources and the tables above.
-source_fingerprint = "1a471efd0de3e04004d133f4a2174f3e"
+source_fingerprint = "08a6722e94c041dc9fa77ed3bcbd6e2d"
 
 # Fingerprint of the published files; lets build and check no-op when current.
-output_fingerprint = "27c118b691060e9093183515cb94cea9"
+output_fingerprint = "91d9f3ded5ef448d22f598b2bd909024"
 
 # Files that the WebAssembly build, or contract discovery without one, reads,
 # such as Rust sources and include_str! files, relative to the Cargo workspace.

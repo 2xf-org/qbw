@@ -41,7 +41,7 @@ use qbw::aging::AgingOptions;
 use qbw::{Company, Side};
 
 let company = Company::open("company.qbw")?;
-let day = "2024-02-15".parse()?;
+let day: qbw::chrono::NaiveDate = "2024-02-15".parse()?;
 let aging = company.aging(Side::Receivable, &AgingOptions::new(day))?;
 println!("Total open AR: {}", aging.totals.total);
 ```

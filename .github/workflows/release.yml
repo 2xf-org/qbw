@@ -1,9 +1,7 @@
 name: Release
 
-# Push a tag such as v0.1.0 to publish that version to crates.io, PyPI and
-# GitHub Releases. Both registries keep a version for ever, so a fix after a
-# publish needs a new version. Run the workflow by hand to build and test
-# everything without publishing.
+# docs/releases.md describes the steps before and after the tag. Run the
+# workflow by hand to build and test everything without publishing.
 on:
   push:
     tags: ["v[0-9]+.[0-9]+.[0-9]+"]
@@ -43,6 +41,16 @@ jobs:
             echo "::error::tag is $GITHUB_REF_NAME, but the manifests say $cargo_version"
             exit 1
           fi
+          if ! grep -qx "qbw = { path = \"rust/qbw\", version = \"=$cargo_version\" }" Cargo.toml; then
+            echo "::error::the workspace dependency on qbw is not at =$cargo_version"
+            exit 1
+          fi
+          for file in README.md rust/qbw/README.md docs/rust/README.md; do
+            if ! grep -qx "qbw = \"=$cargo_version\"" "$file"; then
+              echo "::error::$file does not name qbw at =$cargo_version"
+              exit 1
+            fi
+          done
       - name: Install Bimetal CLI
         run: |
           archive="bimetal-${BIMETAL_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
@@ -226,7 +234,7 @@ jobs:
 
           \`\`\`toml
           [dependencies]
-          qbw = "${version}"
+          qbw = "=${version}"
           \`\`\`
 
           Python:
